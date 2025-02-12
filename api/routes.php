@@ -43,7 +43,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         switch ($request[0]) {
 
             case 'sinigang':
-                echo "YOu ate sinigang!";
+                echo "YOu ate siniganggang!";
                 break;
 
             case 'lahatnguser':
