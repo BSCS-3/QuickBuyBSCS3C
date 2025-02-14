@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # PHP & Apache service
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quickbuy-app
+    volumes:
+      - .:/var/www/html
+      - ./docker/php/custom.ini:/usr/local/etc/php/conf.d/custom.ini
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - quickbuy-network
+
+  # MySQL Service
+  db:
+    image: mysql:8.0
+    container_name: quickbuy-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      MYSQL_PASSWORD: ${PASSWORD}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - quickbuy-network
+
+  # phpMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: quickbuy-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+    networks:
+      - quickbuy-network
+
+networks:
+  quickbuy-network:
+    driver: bridge
+
+volumes:
+  dbdata: 
