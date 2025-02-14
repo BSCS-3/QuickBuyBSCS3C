@@ -1,13 +1,13 @@
 # Project Name
 
-Brief description of your project here.
+BSCS3C QuickBuy E-Commerce Webapp Group Project
 
 ## Prerequisites
 
 - PHP 8.0 or higher
 - Composer
 - MySQL
-- Docker Desktop (if using Docker)
+- Docker Desktop (optional)
 
 ## Setup Instructions
 
