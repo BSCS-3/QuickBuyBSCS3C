@@ -42,13 +42,16 @@ Congrats! You have now enable PDO_MySql Extension!!
    - in your "xampp\htdocs" folder, clone or extract the project
 
 3. **Install dependencies**
-   - In a terminal within "QuickBuyBSCS3C\api", enter "composer install" 
+   - In a terminal within "QuickBuyBSCS3C\api", enter:
+   - "composer install" 
    
 4. **Run migrations**
-   - within "QuickBuyBSCS3C\api", enter "vendor/bin/phinx migrate" 
+   - within "QuickBuyBSCS3C\api", enter:
+   - "vendor/bin/phinx migrate" 
    
 5. **Run seeders**
-   - within "QuickBuyBSCS3C\api", enter "vendor/bin/phinx seed:run" 
+   - within "QuickBuyBSCS3C\api", enter:
+   - "vendor/bin/phinx seed:run" 
 
 
    
