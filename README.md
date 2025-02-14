@@ -7,7 +7,32 @@ BSCS3C QuickBuy E-Commerce Webapp Group Project
 - PHP 8.0 or higher
 - Composer
 - MySQL
+- PDO MySQL Extension
 - Docker Desktop (optional)
+
+
+### Enable PDO MySQL Extension for Database Migrations
+
+1. Find the correct php.ini file:
+   - Open a terminal and run "php --ini"
+   - There should be a "Loaded Configuration File" there with the directory of your "php.ini" (Example: "C:\php-8.3.0\php.ini")
+   - Follow that directory to get to your php.ini file (sometimes display as just "php")
+
+2. Edit the php.ini in Notepad:
+   - Open File Explorer
+   - Go to `C:\php` folder
+   - Right-click `php.ini`
+   - Select "Open with" → Notepad
+
+3. Enable PDO MySQL:
+   - Press Ctrl + F
+   - Search for "pdo_mysql"
+   - Find this line: `;extension=pdo_mysql`
+   - Remove the semicolon (;) so it looks like: "extension=pdo_mysql"
+   - Save the file
+
+Congrats! You have now enable PDO_MySql Extension!!
+  
 
 ## Setup Instructions
 
