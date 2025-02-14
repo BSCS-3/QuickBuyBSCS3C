@@ -1,6 +1,4 @@
-# Project Name
-
-BSCS3C QuickBuy E-Commerce Webapp Group Project
+# BSCS3C QuickBuy E-Commerce Webapp Group Project
 
 ## Prerequisites
 
