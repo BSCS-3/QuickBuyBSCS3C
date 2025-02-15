@@ -41,15 +41,22 @@ Congrats! You have now enable PDO_MySql Extension!!
 
 3. **Install dependencies**
    - In a terminal within "QuickBuyBSCS3C\api", enter:
-   - "composer install" 
+    ```bash
+   composer install
+     ```
    
 4. **Run migrations**
    - within "QuickBuyBSCS3C\api", enter:
-   - "vendor/bin/phinx migrate" 
+   ```bash
+   vendor/bin/phinx migrate
+   ```
+ 
    
 5. **Run seeders**
    - within "QuickBuyBSCS3C\api", enter:
-   - "vendor/bin/phinx seed:run" 
+   ```bash
+   "vendor/bin/phinx seed:run"
+   ```
 
 
    
