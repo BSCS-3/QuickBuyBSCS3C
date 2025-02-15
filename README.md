@@ -55,7 +55,7 @@ Congrats! You have now enable PDO_MySql Extension!!
 5. **Run seeders**
    - within "QuickBuyBSCS3C\api", enter:
    ```bash
-   "vendor/bin/phinx seed:run"
+   vendor/bin/phinx seed:run
    ```
 
 
