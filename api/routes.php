@@ -11,6 +11,8 @@ require_once "./config/database.php";
 require_once "./modules/get.php";
 require_once "./modules/post.php";
 require_once "./modules/product.php";
+require_once "./modules/seller.php";
+
 
 
 // Database Connection
@@ -21,6 +23,7 @@ $pdo = $con->connect();
 $get = new Get($pdo);
 $post = new Post($pdo);
 $product = new Product($pdo);
+$seller = new Seller($pdo);
 
 
 // Check if may 'request'(GET, POST, ETC.)
@@ -52,6 +55,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
             case 'lahatnguser':
                 echo json_encode($get->get_all_users());
                 break;
+            
+
+            case 'sellerProfile':
+                if (count($request) > 1) {
+                    echo json_encode($seller->get_seller_profile($request[1]));
+                }  else {
+                    echo json_encode(["error" => "Seller ID is required"]);
+                }
+                break;
+                
 
             case 'user':
                 if (count($request) > 1) {
