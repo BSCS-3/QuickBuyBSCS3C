@@ -5,6 +5,3 @@
     RewriteRule ^(.*)$ routes.php?request=$1 [L,QSA]
     
 </IfModule>
-
-Header set Access-Control-Allow-Origin "*"
-Header set Access-Control-Allow-Headers "Content-Type"
