@@ -52,7 +52,7 @@ class Get extends GlobalMethods
 
     public function get_all_users()
     {
-        return $this->get_records('user');
+        return $this->get_records('users');
     }
 
 
@@ -63,7 +63,7 @@ class Get extends GlobalMethods
         if ($id != null) {
             $condition = "id=$id";
         }
-        return $this->get_records('user', $condition);
+        return $this->get_records('users', $condition);
     }
 
 

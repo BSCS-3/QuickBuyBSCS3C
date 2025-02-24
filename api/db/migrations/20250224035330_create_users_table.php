@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class CreateProductsTable extends AbstractMigration
+final class CreateUsersTable extends AbstractMigration
 {
     /**
      * Change Method.
