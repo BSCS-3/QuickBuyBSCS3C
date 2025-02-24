@@ -1,0 +1,61 @@
+#	User Stories										
+1	As a customer, I want to login securely										
+2	As a seller, I want to login Securely										
+3	As an admin, Iwant to login Securely										
+4	As a customer, I should have the ability to logout of my account										
+5	As a seller, I should have the ability to logout of my account										
+6	As an admin, I should have the ability to logout of my account										
+7	As a customer, I want to register an account to browse the items i want										
+8	As a seller, I want to register an account to be able to sell										
+9	As a customer, I want to update my profile										
+10	As a seller, I want to update my businesss profile										
+11	As a customer, i want the ability to delete my account										
+12	As a seller, I want the ability to delete my account										
+13	As a customer, I want to browse items currently selling										
+14	As a customer, I want to add item/s to cart										
+15	As a customer, I want to add item/s to wishlist										
+16	As a customer, I want to make orders										
+17	As a customer, I want to know if my order is approved										
+18	As a customer, i want the ability to remove items from my cart										
+19	As a customer, I want the ability to remove items from my wishlist										
+20	As a customer, i want to set how many items i want to order in my cart										
+21	As a customer, I want the ability to report items when it is sus										
+22	As a customer, I want the ability to report businesses when it is sus										
+23	As a customer, I want the ability to leave reviews on an item										
+24	As a customer, I want the ability to leave reviews on a business										
+25	As a customer, I want the ability to see the details of an item if i want to										
+26	As a customer, i want the ability to directly order itmes without going to cart										
+27	As a seller, I want the ability to create items to sell										
+28	As a seller, I want the ability to sell items										
+29	As a seller, I want to see the items that im selling										
+30	As a seller, i want the ability to delete the items im selling										
+31	As a seller I want the ability to update items im selling										
+32	As a seller, I want the ability to browse the orders in my items										
+33	As a seller, I want the ability to check if my item is delivered										
+34	As a customer, I want to filter items based on category when visiting business page										
+35	As a customer, I want to visit the business page if i want to										
+36	As a customer, I want to filter items currently selling (New and Top Rated)										
+37	As a seller, I want to add cetgory on the items im selling										
+38	As a seller, I want a report to know what items is the top seller										
+39	As a seller, i want to create coupon codes on certain items										
+40	As a seller, I want the ability to remove categories on items im selling										
+41	As a seller, I want the ability to create category types										
+42	As a seller, I want the ability to remove categories on items im selling										
+43	As a seller, I want the ability to add categories										
+44	As a seller, I want the ability to update category names										
+45	As a seller, I want the ability to add my own logo to show it to my customers when they visit my page										
+46	As a customer, I want the ability to apply coupon code on items										
+47	As a seller, I want the ability to comment on the reviews on my items										
+48	As a seller, i want the ability to comment on the reviews on my business										
+49	As an admin, I want the ability to approve businesses first before they can proceed to making items, etc on their business										
+50	As an admin, I want the ability to manage user accounts										
+51	As an admin, i want the ability to see reported items										
+52	As an admin, i want the ability to remove reported items										
+53	As an admin, i want the ability to manage user accounts										
+54	As an admin, I want the ability to manage business accounts										
+55	As an admin, i want the ability to delete user accounts										
+56	As an admin, I want the ability to delete business accounts										
+57	As the business owner of quickbuy, I want the customers to browse the items on my shop even when dont have any account										
+58	As the business owner of quickbuy, I want to prompt my potential customers to login or register when they want to add to cart/wishlist the items if they dont have an account yet										
+59	As the business owner of quickybuy, I want a landing page on my page										
+60	As an admin, I want the ability to create other admin accounts with lesser permissions (no ability to create other admin)										
