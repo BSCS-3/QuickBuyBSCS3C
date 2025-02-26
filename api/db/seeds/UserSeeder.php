@@ -18,9 +18,20 @@ class UserSeeder extends AbstractSeed
                 'updated_at' => null
             ],
             [
-                'username' => 'john_doe',
-                'email' => 'john@example.com',
-                'password' => password_hash('password123', PASSWORD_DEFAULT),
+                'username' => 'seller',
+                'email' => 'seller@example.com',
+                'password' => password_hash('seller123', PASSWORD_DEFAULT),
+                'first_name' => 'Sample',
+                'last_name' => 'Seller',
+                'is_active' => true,
+                'role' => 'seller',
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => null
+            ],
+            [
+                'username' => 'customer',
+                'email' => 'customer@example.com',
+                'password' => password_hash('customer123', PASSWORD_DEFAULT),
                 'first_name' => 'John',
                 'last_name' => 'Doe',
                 'is_active' => true,

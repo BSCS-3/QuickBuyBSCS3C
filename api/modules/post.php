@@ -15,23 +15,62 @@ class Post extends GlobalMethods
 
     public function add_user($data)
     {
-        $sql = "INSERT INTO users(username, email, pass) VALUES (?, ? ,?)";
         try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute(
-                [
-                    $data->username,
-                    $data->email,
-                    $data->password,
-                ]
-            );
-            return $this->sendPayload(null, "success", "Successfully created a new record", 200);
-        } catch (PDOException $e) {
-            $errmsg = $e->getMessage();
-            $code = 400;
-        }
+            // Validate required fields
+            if (!isset($data->username) || !isset($data->email) || !isset($data->password)) {
+                return $this->sendPayload(
+                    null,
+                    "failed",
+                    "Username, email and password are required",
+                    400
+                );
+            }
 
-        return $this->sendPayload(null, "failed", $errmsg, $code);
+            // Hash password
+            $hashed_password = password_hash($data->password, PASSWORD_DEFAULT);
+
+            // Set default role as customer if not specified
+            $role = isset($data->role) ? $data->role : 'customer';
+
+            // Insert new user
+            $sql = "INSERT INTO users (username, email, password, first_name, last_name, role) 
+                    VALUES (?, ?, ?, ?, ?, ?)";
+
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                $data->username,
+                $data->email,
+                $hashed_password,
+                $data->first_name ?? null,
+                $data->last_name ?? null,
+                $role
+            ]);
+
+            return $this->sendPayload(
+                null,
+                "success",
+                "User registered successfully",
+                201
+            );
+
+        } catch (PDOException $e) {
+            // Handle duplicate email/username
+            if ($e->getCode() == '23000') {
+                return $this->sendPayload(
+                    null,
+                    "failed",
+                    "Email or username already exists",
+                    409
+                );
+            }
+
+            return $this->sendPayload(
+                null,
+                "failed",
+                $e->getMessage(),
+                400
+            );
+        }
     }
 
 

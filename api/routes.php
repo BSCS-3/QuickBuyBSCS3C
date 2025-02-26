@@ -11,7 +11,8 @@ require_once "./config/database.php";
 require_once "./modules/get.php";
 require_once "./modules/post.php";
 require_once "./modules/product.php";
-
+require_once "./modules/auth.php";
+require_once "./modules/user.php";
 
 // Database Connection
 $con = new Connection();
@@ -21,7 +22,8 @@ $pdo = $con->connect();
 $get = new Get($pdo);
 $post = new Post($pdo);
 $product = new Product($pdo);
-
+$user = new User($pdo);
+$auth = new Auth($pdo);
 
 // Check if may 'request'(GET, POST, ETC.)
 // Nagwowork sya in tandem with the .htaccess
@@ -33,15 +35,8 @@ if (isset($_REQUEST['request'])) {
     http_response_code(404);
 }
 
-
-
-// THIS IS BASICALLY THE RESTAURANT MENU
-
-// The menu has 2 categories, GET  at POST 
 switch ($_SERVER['REQUEST_METHOD']) {
 
-
-        // If GET yung request method natin, eto ang mga pwede nyang pagpilian na potahe(endpoint)
     case 'GET':
         switch ($request[0]) {
 
@@ -68,24 +63,19 @@ switch ($_SERVER['REQUEST_METHOD']) {
         }
         break;
 
-
-
-
-        // If POST yung request method natin, eto ang mga pwede nyang pagpilian na potahe(endpoint)
     case 'POST':
-        // Kinuha natin yung json content na nasa requests, at inistore sya sa $data variable
-        // Eto kumbaga yung mga ingredients
         $data = json_decode(file_get_contents("php://input"));
         switch ($request[0]) {
 
-
-            case 'registeruser':
-                // Return JSON-encoded data for adding users
-                echo json_encode($post->add_user($data));
+            case 'login':
+                echo json_encode($auth->login($data));
                 break;
 
+            case 'register':
+                echo json_encode($user->add_user($data));
+                break;
 
-                // PRODUCTS ENDPOINTS
+            // PRODUCTS ENDPOINTS
             case 'getProducts':
                 echo json_encode($product->get_products($request[1] ?? null));
                 break;

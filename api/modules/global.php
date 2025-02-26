@@ -1,5 +1,6 @@
 <?php
 
+// Global methods class that can be extended by other classes
 class GlobalMethods
 {
     public function sendPayload($data, $remarks, $message, $code)

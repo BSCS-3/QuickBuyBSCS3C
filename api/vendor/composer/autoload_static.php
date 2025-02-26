@@ -43,6 +43,10 @@ class ComposerStaticInit39d715b164b2b90c6870dfc460dfc84c
         array (
             'League\\Container\\' => 17,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'C' => 
         array (
             'Cake\\Utility\\' => 13,
@@ -117,6 +121,10 @@ class ComposerStaticInit39d715b164b2b90c6870dfc460dfc84c
         'League\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/container/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'Cake\\Utility\\' => 
         array (

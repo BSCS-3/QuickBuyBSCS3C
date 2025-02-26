@@ -4,8 +4,60 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71d0a0cd867658607fce0ab12bc231f1",
+    "content-hash": "a36e7029170c3391aaa404b8ec680496",
     "packages": [
+        {
+            "name": "cakephp/cakephp",
+            "version": "2.10.22",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cakephp/cakephp.git",
+                "reference": "d0c51b37422d0d2c99be74045d4439a674259308"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/d0c51b37422d0d2c99be74045d4439a674259308",
+                "reference": "d0c51b37422d0d2c99be74045d4439a674259308",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "cakephp/cakephp-codesniffer": "^1.0.0",
+                "phpunit/phpunit": "^3.7"
+            },
+            "suggest": {
+                "ext-mcrypt": "You need to install ext-openssl or ext-mcrypt to use AES-256 encryption",
+                "ext-openssl": "You need to install ext-openssl or ext-mcrypt to use AES-256 encryption"
+            },
+            "bin": [
+                "lib/Cake/Console/cake"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "CakePHP Community",
+                    "homepage": "https://github.com/cakephp/cakephp/graphs/contributors"
+                }
+            ],
+            "description": "The CakePHP framework",
+            "homepage": "https://cakephp.org",
+            "keywords": [
+                "framework"
+            ],
+            "support": {
+                "forum": "https://stackoverflow.com/tags/cakephp",
+                "irc": "irc://irc.freenode.org/cakephp",
+                "issues": "https://github.com/cakephp/cakephp/issues",
+                "source": "https://github.com/cakephp/cakephp"
+            },
+            "time": "2020-06-07T02:16:36+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "3.1.0",
@@ -67,16 +119,16 @@
         },
         {
             "name": "cakephp/core",
-            "version": "5.1.5",
+            "version": "5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/core.git",
-                "reference": "3d303f84dfc243b8e9e806904a57c2b6e2e81050"
+                "reference": "a444d4e993b40da3bc53fccb669b3937b11911be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/core/zipball/3d303f84dfc243b8e9e806904a57c2b6e2e81050",
-                "reference": "3d303f84dfc243b8e9e806904a57c2b6e2e81050",
+                "url": "https://api.github.com/repos/cakephp/core/zipball/a444d4e993b40da3bc53fccb669b3937b11911be",
+                "reference": "a444d4e993b40da3bc53fccb669b3937b11911be",
                 "shasum": ""
             },
             "require": {
@@ -125,20 +177,20 @@
                 "issues": "https://github.com/cakephp/cakephp/issues",
                 "source": "https://github.com/cakephp/core"
             },
-            "time": "2024-12-27T19:02:05+00:00"
+            "time": "2025-01-30T19:58:11+00:00"
         },
         {
             "name": "cakephp/database",
-            "version": "5.1.5",
+            "version": "5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/database.git",
-                "reference": "560eccd214f17f438840d04ec585443ff4fb77fb"
+                "reference": "004d1050f6017809cc83fe7c7aad833303a48327"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/database/zipball/560eccd214f17f438840d04ec585443ff4fb77fb",
-                "reference": "560eccd214f17f438840d04ec585443ff4fb77fb",
+                "url": "https://api.github.com/repos/cakephp/database/zipball/004d1050f6017809cc83fe7c7aad833303a48327",
+                "reference": "004d1050f6017809cc83fe7c7aad833303a48327",
                 "shasum": ""
             },
             "require": {
@@ -187,20 +239,20 @@
                 "issues": "https://github.com/cakephp/cakephp/issues",
                 "source": "https://github.com/cakephp/database"
             },
-            "time": "2025-01-15T19:10:23+00:00"
+            "time": "2025-02-09T07:12:20+00:00"
         },
         {
             "name": "cakephp/datasource",
-            "version": "5.1.5",
+            "version": "5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/datasource.git",
-                "reference": "d00164edbde14e01d215478ce509192092f8f1fc"
+                "reference": "49c4e6864213b00ea3ce21874c6a5cfbfb3c8556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/datasource/zipball/d00164edbde14e01d215478ce509192092f8f1fc",
-                "reference": "d00164edbde14e01d215478ce509192092f8f1fc",
+                "url": "https://api.github.com/repos/cakephp/datasource/zipball/49c4e6864213b00ea3ce21874c6a5cfbfb3c8556",
+                "reference": "49c4e6864213b00ea3ce21874c6a5cfbfb3c8556",
                 "shasum": ""
             },
             "require": {
@@ -249,11 +301,11 @@
                 "issues": "https://github.com/cakephp/cakephp/issues",
                 "source": "https://github.com/cakephp/datasource"
             },
-            "time": "2025-01-07T13:15:08+00:00"
+            "time": "2025-02-04T02:45:22+00:00"
         },
         {
             "name": "cakephp/utility",
-            "version": "5.1.5",
+            "version": "5.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/utility.git",
@@ -309,6 +361,69 @@
                 "source": "https://github.com/cakephp/utility"
             },
             "time": "2025-01-11T17:40:02+00:00"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v6.11.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "8f718f4dfc9c5d5f0c994cdfd103921b43592712"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/8f718f4dfc9c5d5f0c994cdfd103921b43592712",
+                "reference": "8f718f4dfc9c5d5f0c994cdfd103921b43592712",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^7.4",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "psr/cache": "^2.0||^3.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0"
+            },
+            "suggest": {
+                "ext-sodium": "Support EdDSA (Ed25519) signatures",
+                "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v6.11.0"
+            },
+            "time": "2025-01-23T05:11:06+00:00"
         },
         {
             "name": "league/container",

@@ -22,6 +22,7 @@ return array(
     'Psr\\Clock\\' => array($vendorDir . '/psr/clock/src'),
     'Phinx\\' => array($vendorDir . '/robmorgan/phinx/src/Phinx'),
     'League\\Container\\' => array($vendorDir . '/league/container/src'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
     'Cake\\Utility\\' => array($vendorDir . '/cakephp/utility'),
     'Cake\\Datasource\\' => array($vendorDir . '/cakephp/datasource'),
     'Cake\\Database\\' => array($vendorDir . '/cakephp/database'),

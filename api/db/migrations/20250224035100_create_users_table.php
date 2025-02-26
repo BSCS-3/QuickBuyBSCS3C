@@ -26,7 +26,7 @@ final class CreateUsersTable extends AbstractMigration
             ->addColumn('first_name', 'string', ['limit' => 100, 'null' => true])
             ->addColumn('last_name', 'string', ['limit' => 100, 'null' => true])
             ->addColumn('is_active', 'boolean', ['default' => true])
-            ->addColumn('role', 'string', ['limit' => 50, 'default' => 'user'])
+            ->addColumn('role', 'string', ['limit' => 50, 'default' => 'customer'])
             ->addColumn('created_at', 'datetime', ['default' => 'CURRENT_TIMESTAMP'])
             ->addColumn('updated_at', 'datetime', ['null' => true])
 
