@@ -20,7 +20,7 @@ final class CreateProductsTable extends AbstractMigration
     public function change(): void
     {
         $table = $this->table('products');
-        $table->addColumn('seller_id', 'integer')
+        $table->addColumn('seller_id', 'integer', ['signed' => false])
             ->addColumn('name', 'string', ['limit' => 255])
             ->addColumn('description', 'text')
             ->addColumn('price', 'decimal', ['precision' => 10, 'scale' => 2])
@@ -29,7 +29,11 @@ final class CreateProductsTable extends AbstractMigration
             ->addColumn('created_at', 'datetime', ['default' => 'CURRENT_TIMESTAMP'])
             ->addColumn('updated_at', 'datetime', ['null' => true])
 
-            ->addForeignKey('seller_id', 'users', 'id', ['delete' => 'CASCADE'])
+            ->addForeignKey('seller_id', 'users', 'id', [
+                'delete' => 'CASCADE',
+                'update' => 'NO_ACTION',
+                'constraint' => 'fk_products_seller'
+            ])
             ->create();
     }
 }

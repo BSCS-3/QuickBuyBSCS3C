@@ -16,16 +16,15 @@ return [
     ],
     'environments' => [
         'default_migration_table' => 'phinxlog',
-        'default_environment' => 'development',
+        'default_database' => 'development',
         'development' => [
-            'adapter' => DRIVER,
-            'host' => SERVER,
-            'name' => DATABASE,
-            'user' => USER,
-            'pass' => PASSWORD,
+            'adapter' => 'mysql',
+            'host' => 'localhost',
+            'name' => 'quickbuy',
+            'user' => 'root',
+            'pass' => '',
             'port' => '3306',
-            'charset' => 'utf8mb4',
-            'mysql_attr_init_command' => 'SET sql_mode = "STRICT_ALL_TABLES,NO_AUTO_VALUE_ON_ZERO"'
+            'charset' => 'utf8',
         ]
     ]
 ];
