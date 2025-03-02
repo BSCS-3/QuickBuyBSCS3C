@@ -1,0 +1,74 @@
+<div class="container">
+  <div *ngFor="let product of products" class="product-card">
+    <img [src]="product.imageUrl" alt="Product Image" class="product-image">
+    <h3 class="product-title">{{ product.title }}</h3>
+    <p class="product-price">{{ product.price }}</p>
+    
+    <!-- Star Ratings -->
+    <div class="star-rating">
+      <ng-container *ngFor="let _ of [].constructor(product.rating); let i = index">
+        <span>★</span>
+      </ng-container>
+    </div>
+  </div>
+  
+  <!-- Add Item Box -->
+  <div class="add-box" (click)="openAddItem()">
+    <span class="plus-sign">+</span>
+    <span class="Text">Create New Product</span>
+  </div>
+</div>
+
+<!-- Modal for Adding Item -->
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" (click)="closeModal()">&times;</span>
+    <div class="modal-body">
+      <div class="left-container">
+        <div class="image-upload">
+          <label for="file-input" class="image-placeholder">
+            <input id="file-input" type="file" (change)="onFileSelected($event)" hidden>
+            <img src="assets/image-placeholder.png" alt="Upload" class="upload-icon">
+          </label>
+        </div>
+        <div class="input-group">
+          <label for="product-name">Product name*</label>
+          <input id="product-name" type="text" [(ngModel)]="newItem">
+        </div>
+        <div class="input-group">
+          <label for="price">Price*</label>
+          <input id="price" type="number" [(ngModel)]="newPrice" min="0">
+        </div>
+      </div>
+      <div class="right-container">
+        <div class="input-group">
+          <textarea id="description" [(ngModel)]="description" placeholder="Description*"></textarea>
+        </div>
+        <div class="white-box">
+          <div class="category-section">
+            <span class="category-header">Category Details</span>
+            <span class="toggle-icon" (click)="toggleCategoryDetails()">&#9660;</span>
+          </div>
+          <div class="add-container">
+            <div class="input-group">
+              <label for="color">Add color</label>
+              <button class="plus-btn" (click)="addColor()">+</button>
+            </div>
+            <div class="input-group">
+              <label for="size">Add size</label>
+              <button class="plus-btn" (click)="addSize()">+</button>
+            </div>
+            <div class="input-group">
+              <label for="stock">Add stock</label>
+              <button class="plus-btn" (click)="addStock()">+</button>
+            </div>
+          </div>
+          <div class="button-group">
+            <button class="upload-btn" (click)="addItem()">Upload</button>
+            <button class="cancel-btn" (click)="closeModal()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
